@@ -1,8 +1,4 @@
-<script>
-  import Links from "$lib/components/Links.svelte";
 
-</script>
-  <!-- ======= Contact Section ======= -->
   <!-- <section id="contact" class="contact"> -->
     <div class="container">
 
