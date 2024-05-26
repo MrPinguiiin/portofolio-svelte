@@ -54,7 +54,7 @@
             </div>
             <div class="resume-item">
               <h4>Freelance Fullstack Web Developer & Graphic Design</h4>
-              <h5>2026-Present</h5>
+              <h5>2016-Present</h5>
               <p><em>Remote - WFH</em></p>
               <!-- <p> -->
               <ul>
