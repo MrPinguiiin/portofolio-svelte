@@ -20,8 +20,8 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
-  background-size: cover;
+  background: #040404 url("../img/bg.gif") top right no-repeat;
+  /* background-size: cover; */
   left: 0;
   right: 0;
   top: 0;
@@ -934,7 +934,7 @@ section .container {
 .portfolio-details {
   padding-top: 40px;
   background: rgba(0, 0, 0, 0.8);
-  position: fixed;
+  position: cover;
   left: 0;
   right: 0;
   top: 0;
@@ -986,7 +986,7 @@ section .container {
 
 .portfolio-details .swiper-pagination {
   margin-top: 20px;
-  position: relative;
+  position: cover;
 }
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet {
