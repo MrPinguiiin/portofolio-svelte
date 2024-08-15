@@ -25,10 +25,10 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
+            <h3 class="resume-title">Experience</h3>
             <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2016 - Present</h5>
+              <h4>Graphic design</h4>
+              <h5>2016 - 2019</h5>
               <p><em>Perc. Tamora Putra, Tanjung Morawa, Indonesian </em></p>
               <!-- <p> -->
               <ul>

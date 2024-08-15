@@ -146,6 +146,36 @@
             </div>
           </div>
         </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/design/Haircut Diagram.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Design Graphic - Haircut Diagram</h4>
+              <p>Using Canva</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/design/Untitled design.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Design Graphic - Ramadhan</h4>
+              <p>Using Canva</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/design/Happy Graduations.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Design Graphic - Graduations</h4>
+              <p>Using Coreldraw</p>
+            </div>
+          </div>
+        </div>
 
       </div>
 

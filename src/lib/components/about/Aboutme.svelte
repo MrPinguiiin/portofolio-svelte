@@ -21,15 +21,18 @@
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>mrpinguiiin.github,io</span></li>
+              <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>mystorytell.vercel.app</span></li> -->
+              <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <a href="https://mystorytell.vercel.app" target="_blank">mystorytell.vercel.app</a></li>
+              
               <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 858 3635 0018</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Whatsapp:</strong> <span>+62 858 3635 0018</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Medan, Indonesian</span></li>
+              <!-- <li><i class="bi bi-chevron-right"></i> <strong>Whatsapp:</strong> <span>+62 858 3635 0018</span></li> -->
+              <li><i class="bi bi-chevron-right"></i> <strong>Whatsapp:</strong> <a href="https://wa.me/6285836350018" target="_blank">I am Here</a></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Tanjung Morawa, Indonesian</span></li>
             </ul>
           </div>
           <div class="col-lg-6">
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>S1- Information System</span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>alansnulien@gmail.com</span></li>
               <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
