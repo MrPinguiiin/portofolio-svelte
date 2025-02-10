@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #040404;
+  /* background-color: #040404; */
   color: #fff;
   position: relative;
   background: transparent;
@@ -20,8 +20,8 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/particle.gif") top right repeat;
-  background-size: cover;
+  background: #040404;
+  /* background-size: cover; */
   left: 0;
   right: 0;
   top: 0;
@@ -361,7 +361,7 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0.9);
+  /* background: rgba(0, 0, 0, 0.9); */
   padding: 30px;
 }
 

@@ -1,208 +1,129 @@
-<script>
+<script lang="ts">
   import Navbar from "$lib/components/Navbar.svelte";
   import Links from "$lib/components/Links.svelte";
-  
   import Aboutme from "$lib/components/about/Aboutme.svelte";
   import Count from "$lib/components/about/Count.svelte";
   import Skills from "$lib/components/about/Skills.svelte";
   import Sertificate from "$lib/components/about/Sertificate.svelte";
-  
   import Resume from "$lib/components/resume/Resume.svelte";
-  
   import Contact from "$lib/components/contact/Contact.svelte";
+    import Paticles from "$lib/components/ui/Paticles.svelte";
+
+
+  const projects = [
+    { image: "assets/img/portfolio/rentcar.png", title: "Rent Car", description: "Fullstack Laravel with Filament", link: "../rentcar-details.html" },
+    { image: "assets/img/portfolio/blog.png", title: "Website Blog", description: "Fullstack Laravel", link: "blog-details.html" },
+    { image: "assets/img/portfolio/medic.png", title: "Medic", description: "Fullstack Laravel", link: "medic-details.html" },
+    { image: "assets/img/design/Haircut Diagram.png", title: "Design Graphic - Haircut Diagram", description: "Using Canva" },
+    { image: "assets/img/design/Untitled design.png", title: "Design Graphic - Ramadhan", description: "Using Canva" },
+    { image: "assets/img/design/Happy Graduations.png", title: "Design Graphic - Graduations", description: "Using Coreldraw" }
+  ]
 
 </script>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+<!-- <head>
   <title>Hi! Welcome </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-</head>
-
-<body>
+</head> -->
+<div>
   
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
+  <div
+    class="fixed flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-background"
+    >
+    <Paticles className="fixed inset-0" refresh={true} />
+  </div>
+  <div class="bg-black">
+    <header id="header" class="text-white">
+      <div class="container mx-auto px-4 ">
+        <h1 class="text-3xl font-bold mb-2"><a href="/" class="text-white hover:text-gray-300">Muhammad Norshahlan</a></h1>
+        <h2 class="text-xl">
+          I'm a passionate <span class="text-yellow-400">Fullstack Developer & Graphic Designer</span> from
+          Indonesian
+        </h2>
 
-      <h1><a href="/">Muhammad Norshahlan</a></h1>
-      <h2>I'm a passionate <span>Fullstack Developer & Graphic Designer</span> from Indonesian</h2>
-
-      <Navbar />
-      <Links />
-
-    </div>
-  </header>
-  
-  <!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <!-- ======= About Me ======= -->
-    <Aboutme />
-    <!-- End About Me -->
-
-    <!-- ======= Counts ======= -->
-    <Count />
-    <!-- End Counts -->
-
-    <!-- ======= Skills  ======= -->
-    <Skills />
-    <!-- End Skills -->
-
-    <!-- ======= Testimonials ======= -->
-    <div class="testimonials container">
-
-      <div class="section-title">
-        <h2>Sertificates</h2>
+        <Navbar />
+        <Links />
       </div>
+    </header>
+    <section id="about" class="about py-12">
+      <div class="container mx-auto px-4 rounded-xl bg-red">
+        <Aboutme />
+        <Count />
+        <Skills />
+        <div class="testimonials container mx-auto px-4 py-12">
+          <div class="section-title text-center mb-8">
+            <h2 class="text-3xl font-bold">Sertificates</h2>
+          </div>
 
-      <Sertificate />
-
-      <div class="owl-carousel testimonials-carousel">
-
+          <Sertificate />
+        </div>
+        </div>
+    </section>
+    <section id="resume" class="resume py-12">
+      <div class="container mx-auto px-4 rounded-xl">
+      <Resume />
       </div>
+    </section>
+    <section id="portfolio" class="portfolio py-12">
+      <div class="container mx-auto px-4 rounded-xl">
+        <div class="section-title text-center mb-8">
+          <h2 class="text-3xl font-bold">Portfolio</h2>
+          <p class="text-lg">My Works</p>
+        </div>
 
-    </div>
-    <!-- End Testimonials  -->
-
-  </section>
-  <!-- End About Section -->
-
-  <!-- ======= Resume Section ======= -->
-  <section id="resume" class="resume">
-    
-    <Resume />
-
-  </section><!-- End Resume Section -->
-
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">Web Applications</li>
-            <!-- <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li> -->
+        <div class="flex justify-center mb-8">
+          <ul id="portfolio-flters" class="flex space-x-4">
+            <li data-filter="*" class="filter-active cursor-pointer px-4 py-2 rounded">Web Applications</li>
+            <li data-filter=".filter-app" class="cursor-pointer px-4 py-2 rounded">App</li>
+            <li data-filter=".filter-card" class="cursor-pointer px-4 py-2 rounded">Card</li>
+            <li data-filter=".filter-web" class="cursor-pointer px-4 py-2 rounded">Web</li>
           </ul>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {#each projects as item}
+            <div class="portfolio-item filter-app">
+              <div class="portfolio-wrap relative">
+                <img src={item.image} class="img-fluid w-full" alt={item.title} />
+                <div class="portfolio-info absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+                  <h4 class="text-white text-xl font-bold mb-2">{item.title}</h4>
+                  <p class="text-white">{item.description}</p>
+                   {#if item.link}
+                  <div class="flex space-x-2 mt-2">
+                    <a aria-label="Open image in new tab"
+                      href={item.image}
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title={item.title}><i class="bx bx-plus text-white"></i></a
+                    >
+                    <a aria-label="Open details in new tab"
+                      href={item.link}
+                      data-gallery="portfolioDetailsGallery"
+                      data-glightbox="type: external"
+                      class="portfolio-details-lightbox"
+                      title="Portfolio Details"><i class="bx bx-link text-white"></i></a
+                    >
+                  </div>
+                  {/if}
+                </div>
+              </div>
+            </div>
+          {/each}
+        </div>
       </div>
-
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/rentcar.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Rent Car</h4>
-              <p>Fullstack Laravel with Filament</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/rentcar.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="../rentcar-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/blog.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Website Blog</h4>
-              <p>Fullstack Laravel</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/blog.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="blog-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/medic.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Medic</h4>
-              <p>Fullstack Laravel</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/medic.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="medic-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/design/Haircut Diagram.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Design Graphic - Haircut Diagram</h4>
-              <p>Using Canva</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/design/Untitled design.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Design Graphic - Ramadhan</h4>
-              <p>Using Canva</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/design/Happy Graduations.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Design Graphic - Graduations</h4>
-              <p>Using Coreldraw</p>
-            </div>
-          </div>
-        </div>
-
+    </section>
+    <section id="contact" class="contact py-12">
+      <div class="container mx-auto px-4 rounded-xl">
+      <Contact />
       </div>
+    </section>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    </div>
-  </section><!-- End Portfolio Section -->
-
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <Contact />
-  </section>
-  <!-- End Contact Section -->
-
-  <!-- <div class="credits">
-    Designed by <a href="https://bootstrapmade.com/">Muhammad Norshah</a>
-  </div> -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+    <script src="assets/js/main.js"></script>
+  </div>
+</div>
